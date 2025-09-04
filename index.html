@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina Moreno</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header y navegación */
+        header {
+            background-color: #ff9800;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #f0f0f0;
+        }
+        
+        /* Hero section */
+        .hero {
+            background-color: #f57c00;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Catálogo de cervezas */
+        .catalog {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #ff9800;
+            margin: 10px auto;
+        }
+        
+        .beer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .beer-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .beer-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .beer-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .beer-image img {
+            max-height: 180px;
+            max-width: 90%;
+        }
+        
+        .beer-info {
+            padding: 15px;
+        }
+        
+        .beer-info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .beer-info p {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .beer-price {
+            font-weight: bold;
+            color: #ff9800;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        /* Formulario de pedido */
+        .order-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #f57c00;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            .beer-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="Imagenes/logo.jpeg" alt="Logo [Nombre]">
+                <h1>Cantina Moreno</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#pedido">Hacer Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero">
+        <div class="container">
+            <h2>Cantina Moreno</h2>
+            <p>Culo el que diga</p>
+        </div>
+    </section>
+
+    <!-- Catálogo de cervezas -->
+    <section id="catalogo" class="catalog container">
+        <h2 class="section-title">Nuestras Cervezas</h2>
+        <div class="beer-grid">
+            <!-- Producto 1 -->
+            <div class="beer-card">
+                <div class="beer-image">
+                    <img src="Imagenes/Indio.jpeg" alt="Cerveza IPA">
+                </div>
+                <div class="beer-info">
+                    <h3>Indio</h3>
+                    <p>Six de Cerveza Indio</p>
+                    <p class="beer-price">$115</p>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="beer-card">
+                <div class="beer-image">
+                    <img src="Imagenes/Corona.jpeg" alt="Cerveza Stout">
+                </div>
+                <div class="beer-info">
+                    <h3>Corona Light</h3>
+                    <p>Six de Cerveza Corona Light</p>
+                    <p class="beer-price">$380</p>
+                </div>
+            </div>
+
+            
+            <!-- Puedes agregar más productos según necesites -->
+        </div>
+    </section>
+
+    <!-- Formulario de pedido -->
+    <section id="pedido" class="container">
+        <h2 class="section-title">Realiza tu Pedido</h2>
+        <div class="order-form">
+            <form id="beer-order-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Dirección de entrega</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="beer-selection">Selecciona tu cerveza</label>
+                    <select id="beer-selection" name="beer" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="ipa">IPA - $350</option>
+                        <option value="stout">Stout - $380</option>
+                        <option value="amber">Amber Ale - $330</option>
+                        <option value="wheat">Wheat Beer - $320</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Cantidad</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje adicional (opcional)</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 [Nombre de la Cervecería]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para manejar el envío del formulario
+        document.getElementById('beer-order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aquí normalmente conectarías con un backend para procesar el pedido
+            // Por ahora solo mostraremos una alerta
+            alert('¡Pedido recibido! Te contactaremos pronto para confirmar el envío a domicilio.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
