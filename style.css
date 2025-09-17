@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'CoronaHeadline';
+  src: url('CoronaHeadline-SemiBold.woff');
+}
+
+.cervezas h2, 
+.pedido h2,
+.hero h3{
+    font-family: 'CoronaHeadline', sans-serif;
+}
+
+.cerveza, 
+.hero ul li{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Formulario de pedido */
+.order-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
