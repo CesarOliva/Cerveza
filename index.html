@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantina Moreno</title>
+    <meta name="description" content="Cantina Moreno - Servicio a domicilio de cerveza. ¡Haz tu pedido ahora y disfruta de tu cerveza favorita en la comodidad de tu hogar!">
+    <link rel="shortcut icon" href="Imagenes/logo.jpeg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
     <section class="hero w-full flex flex-col justify-center items-center">
         <div class="flex-wrap w-[80%] flex items-center justify-center">
             <img src="Imagenes/logo.png" alt="Logo Cantina Moreno" class="my-8 max-h-[300px] md:mr-12">
-            <div class="max-w-[500px] mb-8">
+            <div class="max-w-[500px] mb-8 md:mb-0">
                 <h3 class="text-3xl md:text-start text-center font-semibold text-[#967737] mb-4">¡Haz tu pedido de cerveza ahora!🍺</h3>
                 <ul class="text-[18px] font-[500]">
                     <li class="mb-2">1️⃣ Llena el formulario con tu nombre, teléfono, dirección y la cerveza de tu elección.</li>
@@ -53,13 +55,45 @@
                 </div>
             </div>
             <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/Modelo.jpeg" class="bg-white rounded-xl p-4 max-w-[250px]" alt="cerveza modelo">
+                <img src="Imagenes/Modelo.jpeg" class="bg-white object-cover  rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza modelo">
                 <div>
                     <h3 class="text-center text-xl text-[#0c2340] font-semibold">MODELO</h3>
                     <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Modelo</p>
                     <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$120</p>
                 </div>
             </div>
+            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
+                <img src="Imagenes/Tecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza Tecate">
+                <div>
+                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Tecate</h3>
+                    <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Tecate</p>
+                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
+                </div>
+            </div>
+            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
+                <img src="Imagenes/CaguamaTecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Tecate">
+                <div>
+                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Caguama Tecate</h3>
+                    <p class="text-center text-lg text-[#0c2340]">Caguama Tecate</p>
+                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
+                </div>
+            </div>
+            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
+                <img src="Imagenes/CaguamaCorona.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Corona">
+                <div>
+                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Caguama Corona</h3>
+                    <p class="text-center text-lg text-[#0c2340]">Caguama Corona</p>
+                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
+                </div>
+            </div>                        
+            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
+                <img src="Imagenes/CaguamaVictoria.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Victoria">
+                <div>
+                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Carton Victoria</h3>
+                    <p class="text-center text-lg text-[#0c2340]">Cartón Caguama Victoria</p>
+                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$550</p>
+                </div>
+            </div>            
         </div>
     </section>
 
@@ -104,8 +138,9 @@
                         <textarea id="message" name="message"></textarea>
                     </div>
                     
-                    <div class="w-full flex justify-center">
+                    <div class="boton w-full flex justify-center items-center flex-col">
                         <button type="submit" class="rounded-md bg-[#fb0] text-center text-white px-[25px] text-xl py-[6px]">Hacer Pedido</button>
+                        <h4 class="text-[20px] text-[#0c2340] mt-4">Costo de envio segun la ubicacion</h4>
                     </div>
                 </form>
             </div>

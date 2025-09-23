@@ -5,7 +5,8 @@
 
 .cervezas h2, 
 .pedido h2,
-.hero h3{
+.hero h3,
+.boton h4{
     font-family: 'CoronaHeadline', sans-serif;
 }
 
