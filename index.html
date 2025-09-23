@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="bg-white">
     <img src="Imagenes/header_bg-corona.svg" class="h-16 w-full" alt="">
@@ -29,71 +30,101 @@
 
     <section class="cervezas bg-[#fb0] w-full flex flex-col justify-center items-center pb-16">
         <h2 class="my-8 text-center text-5xl text-[#0c2340]">COMPRA TU CERVEZA FAVORITA</h2>
-        <div class="flex justify-center items-stretch flex-wrap justify-center items-center gap-y-4 gap-x-4">
-            <div class="cerveza bg-white rounded-xl flex flex-col">
-                <img src="Imagenes/CoronaExtra.jpeg" class="bg-white rounded-xl p-4 max-w-[250px]" alt="cerveza corona">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">CORONA</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Corona</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
+        
+        <div class="swiper w-full max-w-5xl">
+            <div class="swiper-wrapper flex flex-row items-stretch">
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/CoronaExtra.jpeg" class="bg-white rounded-xl p-4" alt="cerveza corona"/>
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">CORONA</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Corona</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/CoronaLight.jpeg" class="bg-white rounded-xl p-4" alt="cerveza corona light"/>
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">CORONA LIGHT</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Six de Corona Light</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/Indio.jpeg" class="bg-white rounded-xl p-4" alt="cerveza indio"/>
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">INDIO</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Indio</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$115</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/Modelo.jpeg" class="bg-white object-cover  rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza modelo">
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">MODELO</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Modelo</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$120</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/Tecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza Tecate">
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">TECATE</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Tecate</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/CaguamaTecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Tecate">
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">CAGUAMA TECATE</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Caguama Tecate</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
+                        </div>       
+                    </div>
+                </div> 
+
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/CaguamaCorona.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Corona">
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">CAGUAMA CORONA</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Caguama Corona</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide flex justify-center">
+                    <div class="cerveza bg-white rounded-xl flex flex-col items-center">
+                        <img src="Imagenes/CaguamaVictoria.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Victoria">
+                        <div>
+                            <h3 class="text-center text-xl text-[#0c2340] font-semibold">CARTÓN VICTORIA</h3>
+                            <p class="text-center text-lg text-[#0c2340]">Cartón Caguama Victoria</p>
+                            <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$550</p>
+                        </div>
+                    </div>
+                </div>   
             </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col">
-                <img src="Imagenes/CoronaLight.jpeg" class="bg-white rounded-xl p-4 max-w-[250px]" alt="cerveza corona light">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">CORONA LIGHT</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Six de Corona Light</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
-                </div>
-            </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col">
-                <img src="Imagenes/Indio.jpeg" class="bg-white rounded-xl p-4 max-w-[250px]" alt="cerveza indio">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">INDIO</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Indio</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$115</p>
-                </div>
-            </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/Modelo.jpeg" class="bg-white object-cover  rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza modelo">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">MODELO</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Modelo</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$120</p>
-                </div>
-            </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/Tecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="cerveza Tecate">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Tecate</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Six de Cerveza Tecate</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$110</p>
-                </div>
-            </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/CaguamaTecate.webp" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Tecate">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Caguama Tecate</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Caguama Tecate</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
-                </div>
-            </div>
-            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/CaguamaCorona.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Corona">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Caguama Corona</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Caguama Corona</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$48<br>$53 con envase</p>
-                </div>
-            </div>                        
-            <div class="cerveza bg-white rounded-xl flex flex-col justify-between">
-                <img src="Imagenes/CaguamaVictoria.jpeg" class="bg-white object-cover rounded-xl p-4 h-[250px] max-w-[250px]" alt="Caguama Victoria">
-                <div>
-                    <h3 class="text-center text-xl text-[#0c2340] font-semibold">Carton Victoria</h3>
-                    <p class="text-center text-lg text-[#0c2340]">Cartón Caguama Victoria</p>
-                    <p class="text-center text-lg text-[#0c2340] font-semibold mb-4">$550</p>
-                </div>
-            </div>            
+        
+            <div class="swiper-pagination"></div>        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
@@ -123,8 +154,14 @@
                             <option value="">-- Selecciona una opción --</option>
                             <option value="CoronaLight">Corona - $115</option>
                             <option value="CoronaLight">Corona Light - $115</option>
-                            <option value="indio">Indio - $110</option>
-                            <option value="indio">Modelo - $120</option>
+                            <option value="Indio">Indio - $110</option>
+                            <option value="Modelo">Modelo - $120</option>
+                            <option value="Tecate">Tecate - $110</option>
+                            <option value="indio">Caguama Tecate - $48</option>
+                            <option value="indio">Caguama Tecate + Envase - $53</option>
+                            <option value="indio">Caguama Corona - $48</option>
+                            <option value="indio">Caguama Corona + Envase - $53</option>
+                            <option value="indio">Cartón Victoria - $550</option>
                         </select>
                     </div>
                     
@@ -151,5 +188,8 @@
     <section class="footer bg-black w-full flex justify-center items-center p-8">
         <img src="Imagenes/logo.png" class="max-h-64" alt="Logo Cantina Moreno">
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
