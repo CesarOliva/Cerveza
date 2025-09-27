@@ -38,7 +38,7 @@ document.getElementById("beer-order-form").addEventListener("submit", function(e
 5️⃣ Cantidad: ${quantity}%0A
 6️⃣ Mensaje: ${message ? message : "Ninguno"}`;
 
-    let url = `https://wa.me/528721186287?text=${texto}`;
+    let url = `https://wa.me/528721386749?text=${texto}`;
 
     window.open(url, "_blank");
   });
